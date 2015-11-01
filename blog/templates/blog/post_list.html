@@ -32,10 +32,18 @@
 				</p>
 			</nav>
 
+			{% for post in posts%}
 			<div>
-				<h1><a href="">Tts Blog</a></h1>
-			</div>
+				<p>
+					published: {{post.published_date}}
+				</p>
+				<h1><a href="">{{post.title}}</a></h1>
+				<p>
+					{{post.text|linebreaks}}
+				</p>
 
+			</div>
+			{% endfor %}
 			<div>
 				<p>
 					published: 14.06.2014, 12:14
